@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "prueba"
+gcc $CFILE c

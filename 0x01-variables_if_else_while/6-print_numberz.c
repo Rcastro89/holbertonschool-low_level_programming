@@ -8,7 +8,7 @@ int main(void)
 	int i = 0;
 
 	do {
-		putchar(i);
+		putchar(itoa(i, string, 10));
 		i++;
 	} while (i != 10);
 	return (0);

@@ -7,14 +7,14 @@
 int main(void)
 {
 	int n;
-	/*int a;*/
+	int a;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 
 
-	/* a = n % 10; */
-	printf("El valor es %d", n);
+	a = n % 10; 
+	printf("El valor es %d", a);
 	return (0);
 }

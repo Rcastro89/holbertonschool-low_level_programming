@@ -1,17 +1,16 @@
 #include <stdio.h>
 /**
- * main - funtion do while putchar
+ * main - funtion for putchar
  * Return: (0) success
  */
 int main(void)
 {
-	char line = '\n';
-	int i = 0;
+	int n;
 
-	do {
-		printf("%d", i);
-		i++;
-	} while (i != 10);
-	putchar(line);
+	for (n = 48; n < 58; n++)
+	{
+		putchar(n);
+	}
+	putchar('\n');
 	return (0);
 }

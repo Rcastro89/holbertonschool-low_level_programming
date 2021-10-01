@@ -17,12 +17,12 @@ int main(void)
 				putchar(lt);
 				lt++;
 				i++;
-			} else 
+			} else
 			{
 				lt++;
 				i++;
 			}
-		} else 
+		} else
 		{
 			lt++;
 			i++;

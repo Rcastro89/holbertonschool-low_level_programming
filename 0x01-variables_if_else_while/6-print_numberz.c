@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
  * main - funtion do while putchar
  * Return: (0) success

@@ -1,10 +1,10 @@
 #include<stdio.h>
 
-int Entero;
+
 
 int main(void)
 {
-	Entero=sizeof(int);
-	printf("Entero10",Entero);
+	
+	printf("Entero %zd", sizeof (int));
 	return (0);
 }

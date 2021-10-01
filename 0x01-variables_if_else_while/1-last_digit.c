@@ -4,6 +4,10 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ * main - funtion if else
+ * Return: (0) success
+ */
 int main(void)
 {
 	int n;
@@ -25,6 +29,6 @@ int main(void)
 		{
 			printf("Last digit of %d is %d and is less than 6 and not 0\n", n, a);
 		}
-	}	
+	}
 	return (0);
 }

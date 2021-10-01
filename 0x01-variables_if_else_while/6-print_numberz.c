@@ -8,7 +8,6 @@
 int main(void)
 {
 	int i = 0;
-	str
 
 	do {
 		putchar(itoa(i));

@@ -4,6 +4,7 @@ int Entero;
 
 int main(void)
 {
-	printf("Entero", sizeof(Entero));
+	Entero=sizeof(Entero);
+	printf("Entero",Entero);
 	return (0);
 }

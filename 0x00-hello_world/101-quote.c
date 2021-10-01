@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	Try
+	try
 	{
 		printf("Size of a char: %zd byte(s)\n", sizeof(char));
 		printf("Size of an int: %zd byte(s)\n", sizeof(int));
@@ -14,10 +14,8 @@ int main(void)
 		printf("Size of a float: %zd byte(s)\n", sizeof(float));
 		return (0);
 	}
-	Catch (ex)
+	catch (Exception ex)
 	{	
 		printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
 	}
 }
-if (main() < 0)
-       	Throw ex;

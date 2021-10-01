@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	/*int m;
+	int m;
 	int n;
 	int o;
 	int q;
@@ -38,6 +38,6 @@ int main(void)
 			}
 		}
 	}
-	putchar('\n');*/
+	putchar('\n');
 	return (0);
 }

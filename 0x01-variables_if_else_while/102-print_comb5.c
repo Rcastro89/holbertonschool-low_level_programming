@@ -9,7 +9,7 @@ int main(void)
 	int n;
 	int o;
 	int q;
-
+/*
 	for (n = 48; n <= 56; n++)
 	{
 		for (m = 48; m <= 56; m++)
@@ -38,6 +38,6 @@ int main(void)
 			}
 		}
 	}
-	putchar('\n');
+	putchar('\n');*/
 	return (0);
 }

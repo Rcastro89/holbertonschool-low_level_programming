@@ -7,13 +7,14 @@
 int main(void)
 {
 	int n;
+	int a;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	int a;
 
-	a=n % 10;
+
+	a = n % 10;
 	printf(a);
 	return (0);
 }

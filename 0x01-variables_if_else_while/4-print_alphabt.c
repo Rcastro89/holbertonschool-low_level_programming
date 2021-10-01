@@ -20,5 +20,6 @@ int main(void)
 			}
 		}
 	} while (i != 26);
+	putchar(line);
 	return (0);
 }

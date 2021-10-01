@@ -12,10 +12,13 @@ int main(void)
 	{ 
 		for (m = 48; m < 58; m++)
 		{
+			if (n != m)
+			{
 			putchar(n);
 			putchar(m);
 			putchar(',');
 			putchar(' ');
+			}
 		}
 	}
 	putchar('\n');

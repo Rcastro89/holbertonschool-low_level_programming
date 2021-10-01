@@ -1,6 +1,7 @@
 #include<stdio.h>
 int main(void)
 {
-	printf("%d\n Size of int: ", sizeof(long int));
+	int = Entero
+	printf("%d\n Size of int: ", sizeof(Entero));
 	return (0);
 }

@@ -8,6 +8,7 @@ int main(void)
 	int m;
 	int n;
 	int o;
+	int q;
 
 	for (n = 48; n <= 56; n++)
 	{

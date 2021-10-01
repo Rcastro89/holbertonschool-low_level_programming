@@ -15,7 +15,7 @@ int main(void)
 		{ 
 			for (o = 50; o <=58; o++)
 			{
-				if (m > n || o > m)
+				if (m > n && o > m)
 				{
 					putchar(n);
 					putchar(m);

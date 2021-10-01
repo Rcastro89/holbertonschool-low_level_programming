@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int = Entero
+int Entero;
 
 int main(void)
 {

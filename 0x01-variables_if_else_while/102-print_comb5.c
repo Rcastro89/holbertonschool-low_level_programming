@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	int m;
+	/*int m;
 	int n;
 	int o;
 	int q;
-/*
+
 	for (n = 48; n <= 56; n++)
 	{
 		for (m = 48; m <= 56; m++)

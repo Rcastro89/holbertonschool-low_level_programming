@@ -15,6 +15,6 @@ int main(void)
 
 
 	/* a = n % 10; */
-	printf(n);
+	printf("El valor es %d", n);
 	return (0);
 }

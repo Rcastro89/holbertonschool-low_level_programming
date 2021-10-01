@@ -10,6 +10,6 @@ int main(void)
 		putchar(lt);
 		lt++;
 		i++;
-	} while (i!= 25);
+	} while (i!= 26);
 	return (0);
 }

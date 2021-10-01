@@ -7,7 +7,7 @@
 int main(void)
 {
 	int n;
-	int a;
+	/*int a;*/
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -15,6 +15,6 @@ int main(void)
 
 
 	/* a = n % 10; */
-	printf("Hola");
+	printf(n);
 	return (0);
 }

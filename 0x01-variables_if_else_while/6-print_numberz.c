@@ -8,9 +8,11 @@
 int main(void)
 {
 	int i = 0;
+	char a;
 
 	do {
-		putchar(itoa(i));
+		a = itoa(i);
+		printf("%s", a);
 		i++;
 	} while (i != 10);
 	return (0);

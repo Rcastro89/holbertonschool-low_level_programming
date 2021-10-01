@@ -3,6 +3,7 @@
 int main(void)
 {
 	char lt = 'a';
+	char line = '\n';
 	int i = 0;
 
 	do
@@ -11,5 +12,6 @@ int main(void)
 		lt++;
 		i++;
 	} while (i!= 26);
+	putchar(line);
 	return (0);
 }

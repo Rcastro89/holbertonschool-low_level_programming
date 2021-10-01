@@ -9,8 +9,8 @@ int main(void)
 	char line = '\n';
 	int i = 0;
 	int n;
-	
-	for (n =48; n < 58; n++)
+
+	for (n = 48; n < 58; n++)
 	{
 		putchar(n);
 	}

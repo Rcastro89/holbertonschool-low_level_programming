@@ -14,7 +14,7 @@ int main(void)
 	/* your code goes there */
 
 
-	a = n % 10;
-	printf(a);
+	/* a = n % 10; */
+	printf("Hola");
 	return (0);
 }

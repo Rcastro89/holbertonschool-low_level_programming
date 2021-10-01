@@ -4,6 +4,6 @@ int Entero;
 
 int main(void)
 {
-	sizeof(Entero);
+	echo sizeof(Entero);
 	return (0);
 }

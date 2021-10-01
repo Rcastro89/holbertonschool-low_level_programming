@@ -17,7 +17,15 @@ int main(void)
 				putchar(lt);
 				lt++;
 				i++;
+			} else 
+			{
+				lt++;
+				i++;
 			}
+		} else 
+		{
+			lt++;
+			i++;
 		}
 	} while (i != 26);
 	putchar(line);

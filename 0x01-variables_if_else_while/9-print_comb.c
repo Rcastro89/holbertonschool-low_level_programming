@@ -12,12 +12,12 @@ int main(void)
 		if (n != 58)
 		{
 			putchar(n);
-			putchar(', ');
+			putchar(',');
+			putchar(' ');
 		} else 
 		{
 			putchar(n);
 		}
 	}
-	putchar('\n');
 	return (0);
 }

@@ -20,7 +20,7 @@ int main(void)
 					putchar(n);
 					putchar(m);
 					putchar(o);
-					if (n != 56 || m != 57 || o != 58)
+					if (n != 55 || m != 56 || o != 57)
 					{
 						putchar(',');
 						putchar(' ');

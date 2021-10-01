@@ -6,7 +6,7 @@
 int main(void)
 {
 	char lt = 'a';
-	char ltup = 'Z';
+	char ltup = 'A';
 	char line = '\n';
 	int i = 0;
 

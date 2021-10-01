@@ -14,10 +14,13 @@ int main(void)
 		{
 			if (n != m)
 			{
-			putchar(n);
-			putchar(m);
-			putchar(',');
-			putchar(' ');
+				if (n < m)
+				{
+					putchar(n);
+					putchar(m);
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}

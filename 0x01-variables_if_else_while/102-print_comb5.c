@@ -1,39 +1,43 @@
 #include <stdio.h>
-/**
- * main - funtion for putchar
- * Return: (0) success
- */
+
 int main(void)
 {
-	int m;
-	int n;
-	int o;
-	int q;
+	int a;
+	int b;
+	int c;
+	int d;
 
-	for (n = 48; n <= 56; n++)
+	for (a = 48; a < 58; a++)
 	{
-		for (m = 48; m <= 56; m++)
+		for (b = 48; b < 58; b++)
 		{
-			for (o = 48; o <= 56; o++)
+			for (c = 48; c < 58; c++)
 			{
-				for (q = 49; q <=57; q++)
+				for (d = 48; d < 58; d++)
 				{
-					putchar(n);
-					putchar(m);
-					if (n != 57 || m != 57)
+					if (a <= b)
 					{
-						putchar(' ');
-					}
-					if (q > o)
-					{
-						putchar(q);
-						putchar(o);
-						if (o != 56 || m != 57)
+						if (b <= c)
 						{
-							putchar(',');
-							putchar(' ');
+						       if (c <=d)
+						       {
+							       if (d != 57 || c != 57 || b != 57 || a != 57)
+							       {
+								       	putchar(a);
+									putchar(b);
+									putchar(' ');
+									putchar(c);
+									putchar(d);
+									if (d != 57 || c != 57 || b != 57 || a != 56)
+									{	
+										putchar(',');
+										putchar(' ');
+									}
+							       }
+							}
 						}
 					}
+					
 				}
 			}
 		}

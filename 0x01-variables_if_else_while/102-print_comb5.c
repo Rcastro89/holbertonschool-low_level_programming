@@ -1,43 +1,28 @@
 #include <stdio.h>
-
+/**
+ * main - bucles
+ * Return: (0)
+ */
 int main(void)
 {
-	int a;
-	int b;
-	int c;
-	int d;
+	int n;
+	int m;
 
-	for (a = 48; a < 58; a++)
+	for (n = 0; n <= 99; n++)
 	{
-		for (b = 48; b < 58; b++)
+		for (m = 0; m <= 99; m++)
 		{
-			for (c = 48; c < 58; c++)
+			if (n < m)
 			{
-				for (d = 49; d < 58; d++)
+				putchar((n / 10) + 48);
+				putchar((n % 10) + 48);
+				putchar(' ');
+				putchar((m / 10) + 48);
+				putchar((m % 10) + 48);
+				if (n !=98 || m != 99);
 				{
-					if (a <= b)
-					{
-						if (b <= c)
-						{
-						       if (c <=d)
-						       {
-							       if (d != 57 || c != 57 || b != 57 || a != 57)
-							       {
-								       	putchar(a);
-									putchar(b);
-									putchar(' ');
-									putchar(c);
-									putchar(d);
-									if (d != 57 || c != 57 || b != 57 || a != 56)
-									{	
-										putchar(',');
-										putchar(' ');
-									}
-							       }
-							}
-						}
-					}
-					
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}

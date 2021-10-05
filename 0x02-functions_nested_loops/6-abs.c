@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_sign - return number
+ * _abs - return value absolute number
  * @n: integer that cheked
  * Return: (1) success
  */

@@ -7,7 +7,8 @@
 int main(void)
 {
 	int a;
-	int b, c, n;
+	int b = 0;
+	int c, n;
 	
 	n = 10;
 	for (a = 1; b < n; a++)

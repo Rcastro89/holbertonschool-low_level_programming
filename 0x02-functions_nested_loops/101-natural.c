@@ -4,7 +4,7 @@
  * @n: integer that cheked
  * Return: (1) success
  */
-void main(void)
+int main(void)
 {
 	int a;
 	int b, c, n;
@@ -28,4 +28,5 @@ void main(void)
 	}
 	printf("The sum of these multiples is %i ", c);
 	printf("\n");
+	return (c);
 }

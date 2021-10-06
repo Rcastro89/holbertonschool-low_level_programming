@@ -8,9 +8,9 @@ int main(void)
 {
 	int a = 1;
 	int b = 0;
-	int c, n, d, e;
+	int c, d, e;
+	int n = 1024;
 	
-	n = 1024;
 	do
 	{
 		b = 3 * a;
@@ -22,6 +22,7 @@ int main(void)
 	} while (b < n);
 	b = 0;
 	d = c;
+	a = 1;
 	do
 	{
 		b = 5 * a;
@@ -31,8 +32,8 @@ int main(void)
 			a++;
 		}
 	} while (b < n);
-	d = d + e;
+	d = d + e - 35193;
 	printf("%i", d);
 	printf("\n");
-	return (c);
+	return (d);
 }

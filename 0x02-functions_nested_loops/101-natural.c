@@ -4,7 +4,7 @@
  * @n: integer that cheked
  * Return: (1) success
  */
-void main(int n)
+void main(void)
 {
 	int a;
 	int b, c;

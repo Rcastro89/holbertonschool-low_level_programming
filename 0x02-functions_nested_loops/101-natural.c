@@ -33,7 +33,7 @@ int main(void)
 		}
 	} while (b < n);
 	d = d + e;
-	d = d - 35193;
+	/*d = d - 35193;*/
 	printf("%i", d);
 	printf("\n");
 	return (d);

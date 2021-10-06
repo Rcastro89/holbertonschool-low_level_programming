@@ -8,7 +8,7 @@ int main(void)
 {
 	int a = 1;
 	int b = 0;
-	int c, n;
+	int c, n, d, e;
 	
 	n = 1024;
 	do
@@ -21,16 +21,18 @@ int main(void)
 		}
 	} while (b < n);
 	b = 0;
-	for (a = 1; b < n; a++)
+	d = c;
+	do
 	{
 		b = 5 * a;
 		if (b < n)
 		{
-			c = c + b;
+			e = e + b;
 			a++;
 		}
-	}
-	printf("%i", c);
+	} while (b < n);
+	d = d + e;
+	printf("%i", d);
 	printf("\n");
 	return (c);
 }

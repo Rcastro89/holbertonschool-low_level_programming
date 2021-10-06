@@ -6,18 +6,19 @@
  */
 int main(void)
 {
-	int a;
+	int a = 1;
 	int b = 0;
 	int c, n;
 	
 	n = 10;
-	for (a = 1; b < n; a++)
+	do
 	{
 		b = 3 * a;
 		printf("%i", b);
 		printf("\n");
 		c = c + b;
-	}
+		a++;
+	} while (b < n);
 	b = 0;
 	printf("\n");
 	for (a = 1; b < n; a++)

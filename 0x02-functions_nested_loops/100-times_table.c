@@ -1,14 +1,15 @@
+#include <stdio.h>
 #include "main.h"
 /**
- * print_last_digit - return last number of digit
+ * print_times_table - multiplic
  * @n: integer that cheked
- * Return: (1) success
  */
 void print_times_table(int n)
 {
 	int i, j, k, l;
 
-	
+	if (n <= 15)
+	{
 	l = n + 1;
 	for (i = 0; i < l; i++)
 	{
@@ -17,25 +18,21 @@ void print_times_table(int n)
 			k = j * i;
 			if (j == 0)
 			{
-				_putchar(k + '0');
+				printf("%i", k);
 			}
 
 			if (k < 10 && j != 0)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(k + '0');
-			} else if (k >= 10)
+				printf(",   %i", k);
+			} else if (k >= 10 && k < 100)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar((k / 10) + '0');
-				_putchar((k % 10) + '0');
+				printf(",  %i", k);
+			} else if (k >= 100)
+			{
+				printf(", %i", k);
 			}
 		}
-		_putchar('\n');
+		printf("\n");
+	}
 	}
 }

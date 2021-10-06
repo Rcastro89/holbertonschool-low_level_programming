@@ -13,11 +13,14 @@ int main(void)
 	n = 10;
 	do
 	{
-		b = 3 * a;
-		printf("%i", b);
-		printf("\n");
-		c = c + b;
-		a++;
+		if (b < n)
+		{
+			b = 3 * a;
+			printf("%i", b);
+			printf("\n");
+			c = c + b;
+			a++;
+		}
 	} while (b < n);
 	b = 0;
 	printf("\n");

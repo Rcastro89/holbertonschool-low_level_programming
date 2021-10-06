@@ -9,7 +9,7 @@ int main(void)
 	int a;
 	int b, c, n;
 	
-	n = 1024;
+	n = 10;
 	for (a = 1; b < n; a++)
 	{
 		b = 3 * a;

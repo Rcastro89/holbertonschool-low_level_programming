@@ -27,9 +27,13 @@ int main(void)
 	for (a = 1; b < n; a++)
 	{
 		b = 5 * a;
-		printf("%i", b);
-		printf("\n");
-		c = c + b;
+		if (b < n)
+		{
+			printf("%i", b);
+			printf("\n");
+			c = c + b;
+			a++;
+		}
 	}
 	printf("The sum of these multiples is %i ", c);
 	printf("\n");

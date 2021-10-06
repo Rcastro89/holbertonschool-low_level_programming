@@ -1,8 +1,6 @@
 #include "main.h"
 /**
- * print_last_digit - return last number of digit
- * @n: integer that cheked
- * Return: (1) success
+ * times_table - table oh nine
  */
 void times_table(void)
 {

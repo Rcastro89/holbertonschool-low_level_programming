@@ -36,5 +36,5 @@ int main(void)
 	/*d = d - 35193;*/
 	printf("%i", d);
 	printf("\n");
-	return (d);
+	return (0);
 }

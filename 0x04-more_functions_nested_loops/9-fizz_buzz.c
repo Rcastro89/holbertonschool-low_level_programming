@@ -19,23 +19,28 @@ int main(void)
 		{
 			if (i == m5)
 			{
-				printf("FizzBuzz ");
+				printf("FizzBuzz");
 				cont3++;
 				cont5++;
 			} else
 			{
-				printf("Fizz ");
+				printf("Fizz");
 				cont3++;
 			}
 		} else if (i == m5)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 			cont5++;
 		} else
 		{
-			printf("%d ", i);
+			printf("%d", i);
+		}
+		if (i != 100)
+		{
+			printf(" ");
 		}
 	}
 	printf("\n");
 	return (0);
 }
+

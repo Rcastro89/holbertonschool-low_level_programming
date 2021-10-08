@@ -7,7 +7,7 @@
  * Return: (0) success
  */
 
-int _isupper(char a)
+int _isupper(int a)
 {
 
 	if (isupper(a))

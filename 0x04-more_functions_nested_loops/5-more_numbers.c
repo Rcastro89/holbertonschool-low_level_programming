@@ -23,6 +23,6 @@ void more_numbers(void)
 		j++;
 		}
 		i++;
-		printf("\n");
+		_putchar('\n');
 	}
 }

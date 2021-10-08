@@ -4,5 +4,6 @@
 #include <stdio.h>
 
 int _putchar(char c);
+int _isupper(char a);
 
 #endif /* MAIN_H */

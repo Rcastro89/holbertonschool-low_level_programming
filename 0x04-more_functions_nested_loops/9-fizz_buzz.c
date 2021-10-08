@@ -15,7 +15,8 @@ int main(void)
 	{
 		m3 = 3 * cont3;
 		m5 = 5 * cont5;
-		if (i == m3){
+		if (i == m3)
+		{
 			if (i == m5)
 			{
 				printf("FizzBuzz ");
@@ -30,7 +31,6 @@ int main(void)
 		{
 			printf("Buzz ");
 			cont5++;
-			
 		} else
 		{
 			printf("%d ", i);

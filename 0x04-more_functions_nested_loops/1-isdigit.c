@@ -7,7 +7,7 @@
  * Return: (0) success
  */
 
-int _isdigit(char a)
+int _isdigit(int a)
 {
 
 	if (isdigit(a))

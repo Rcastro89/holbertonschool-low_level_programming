@@ -22,9 +22,9 @@ void puts_half(char *str)
 		}
 	} else
 	{
-		for (i = count; i > ((count + 1) / 2); i--)
+		for (i = count; i > ((count - 1) / 2); i--)
 		{
-			temp[j] = str[((count / 2) + j)];
+			temp[j] = str[((count -1 / 2) + j)];
 			j++;
 		}
 	}

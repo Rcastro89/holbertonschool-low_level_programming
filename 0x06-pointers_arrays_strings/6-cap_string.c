@@ -15,10 +15,11 @@ char *cap_string(char *a)
 	}
 	for (j = 0; j < i; j++)
 	{
-		if (a[j] == ' ' || a[j] == '\n' || a[j] == ',' || a[j] == ';' ||
-		a[j] == '.' || a[j] == '!' || a[j] == '\t' ||
-		a[j] == '?' || a[j] == '(' || a[j] == '\"' ||
-		a[j] == ')' || a[j] == '{' || a[j] == '}')
+		temp = a[j];
+		if (temp == 9 || temp == 10 || temp == 32 || temp == 33 ||
+		temp == 34 || temp == 40 ||
+		temp == 41 || temp == 44 || temp == 46 || temp == 59 ||
+		temp == 63 || temp == 123 || temp == 125)
 		{
 			temp = a[j + 1];
 			if (temp > 96 && temp < 122)

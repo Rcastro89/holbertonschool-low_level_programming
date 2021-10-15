@@ -6,7 +6,8 @@
 */
 void print_number(int n)
 {
-	unsigned int i, e, d, div, t, x, y;
+	unsigned int e, d, y;
+	int div, t, i, x;
 
 	if (n == 0)
 	{

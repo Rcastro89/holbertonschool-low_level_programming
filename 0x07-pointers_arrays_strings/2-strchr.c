@@ -31,5 +31,5 @@ char *_strchr(char *s, char c)
 			return (result);
 		}
 	}
-	return (0);
+	return ('\0');
 }

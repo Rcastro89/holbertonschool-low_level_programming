@@ -14,7 +14,7 @@ char *_strstr(char *haystack, char *needle)
 	int i = 0;
 	int j = 0;
 	int k, l;
-	int ctrl;
+	int ctrl = 0;
 
 	while (needle[tamanocorto] != '\0')
 	{
@@ -28,25 +28,24 @@ char *_strstr(char *haystack, char *needle)
 		{
 			k = j + 1;
 			l = i + 1;
-			ctrl = 0;
 			for (; needle[k] != '\0';k++, l++)
 			{
 				if (needle[k] == haystack[l])
 				{
 					temp = (haystack + i);
+					ctrl = 1;
 				} else
 				{
 					temp = "NULL";
 					i++;
-					ctrl = 1;
+					ctrl = 0;
 					break;
 				}
 			}
 		} 
 		i++;
-	}
-	}
-	if (ctrl == 1)
+	}}
+	if (ctrl == 0)
 	return (0);
 	return (temp);
 }

@@ -9,36 +9,38 @@
 */
 char *_strstr(char *haystack, char *needle)
 {
-	int leng = 0;
-	int i, j, k, l;
+	int tamanocorto = 0;
+	char *temp = "NULL";
+	int i = 0;
+	int j = 0;
+	int k, l;
 
-	while (needle[leng] != '\0')
+	while (needle[tamanocorto] != '\0')
 	{
-		leng++;
+		tamanocorto++;
 	}
-	for (i = 0; i <= leng; i++)
+	if (tamanocorto != 0)
 	{
-		for (j = 0; haystack[j] != '\0'; j++)
+	while (haystack[i] != '\0')
+	{
+		if (needle[j] == haystack[i])
 		{
-			if (needle[i] == haystack[j])
+			k = j + 1;
+			l = i + 1;
+			for (; needle[k] != '\0';k++, l++)
 			{
-				l = j + 1;
-				for (k = i + 1; k < (leng - i); k++)
+				if (needle[k] == haystack[l])
 				{
-					if (needle[k] == haystack[l])
-					{
-						l++;
-						if (needle[k + 1] == '\0')
-						{
-							return (haystack + j);
-						}
-					} else
-					{
-						break;
-					}
+					temp = (haystack + i);
+				} else
+				{
+					temp = "NULL";
+					i++;
+					break;
 				}
 			}
-		}
-	}
-	return (0);
+		} 
+		i++;
+	}}
+	return (temp);
 }

@@ -46,6 +46,6 @@ char *_strstr(char *haystack, char *needle)
 	}
 	}
 	if (ctrl == 0)
-	return (0);
+	return (NULL);
 	return (temp);
 }

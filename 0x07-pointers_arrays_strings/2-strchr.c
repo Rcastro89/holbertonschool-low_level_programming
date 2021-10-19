@@ -8,10 +8,7 @@
 char *_strchr(char *s, char c)
 {
 	int leng = 0;
-	int i, j;
-	int count = 0;
-	char *result;
-	char temp[100];
+	int i;
 
 	while (s[leng] != '\0')
 	{
@@ -21,15 +18,12 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			count = leng - i;
-			for (j = 0; j < count; j++)
-			{
-				temp[j] = s[i];
-				i++;
-			}
-			result = temp;
-			return (result);
+			return (s + i);
 		}
 	}
+	if (s[i] == c)
+		{
+			return (s + i);
+		}
 	return ('\0');
 }

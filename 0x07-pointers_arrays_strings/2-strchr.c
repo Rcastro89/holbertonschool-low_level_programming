@@ -22,7 +22,7 @@ char *_strchr(char *s, char c)
 		if (s[i] == c)
 		{
 			count = leng - i;
-			for (j = 0; j <= count; j++)
+			for (j = 0; j < count; j++)
 			{
 				temp[j] = s[i];
 				i++;

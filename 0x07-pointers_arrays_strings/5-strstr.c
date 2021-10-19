@@ -41,6 +41,9 @@ char *_strstr(char *haystack, char *needle)
 			}
 		} 
 		i++;
-	}}
+	}
+	}
+	if (temp = "NULL")
+	return (0);
 	return (temp);
 }

@@ -36,7 +36,6 @@ char *_strstr(char *haystack, char *needle)
 					ctrl = 1;
 				} else
 				{
-					temp = "NULL";
 					i++;
 					ctrl = 0;
 					break;
@@ -44,7 +43,8 @@ char *_strstr(char *haystack, char *needle)
 			}
 		} 
 		i++;
-	}}
+	}
+	}
 	if (ctrl == 0)
 	return (0);
 	return (temp);

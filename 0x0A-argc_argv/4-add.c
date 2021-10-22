@@ -1,7 +1,7 @@
 #include"main.h"
 #include<stdio.h>
 #include<stdlib.h>
-#include <ctype.h>
+#include<ctype.h>
 /**
 * main - multiplicate numbers
 * @argc: numers of arguments
@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int i;
 	int j = 0;
 	int k;
+	int c;
 
 	if (argc < 1)
 	{
@@ -20,21 +21,21 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	for (i = 1; i < argc; i++)
-	{
-		if ((*argv[i] >= 48 && *argv[i] <= 57))
+	{	c = 1;
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			k = 1;
-		} else
-		{
-			k = 0;
+			if ((isdigit(argv[i][j]) == 0 && argv[i][j] != '0'))
+			{
+				c = 0;
+			}
 		}
-		if (k == 0)
+		if (c == 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
-			j = j + atoi(argv[i]);
+		k = k + atoi(argv[i]);
 	}
-	printf("%d\n", j);
+	printf("%d\n", k);
 	return (0);
 }

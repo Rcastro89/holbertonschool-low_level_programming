@@ -21,12 +21,12 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (*argv[i] == '0')
+		if ((*argv[i] >= 48 && *argv[i] <= 57) || (*argv[i] == 45))
 		{
 			k = 1;
 		} else
 		{
-			k = (atoi(argv[i]));
+			k = 0;
 		}
 		if (k == 0)
 		{

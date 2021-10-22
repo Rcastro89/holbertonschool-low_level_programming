@@ -21,18 +21,20 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		k =(atoi(argv[i]));
+		if (*argv[i] == '0')
+		{
+			k = 1;
+		} else
+		{
+			k = (atoi(argv[i]));
+		}
 		if (k == 0)
 		{
 			printf("Error\n");
 			return (1);
-		} else
-		{
-			j = j + atoi(argv[i]);
 		}
-		
+			j = j + atoi(argv[i]);
 	}
-	
 	printf("%d\n", j);
 	return (0);
 }

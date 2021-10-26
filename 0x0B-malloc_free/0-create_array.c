@@ -18,7 +18,7 @@ char *create_array(unsigned int size, char c)
 	{
 		ma[i] = c;
 	}
-	if (ma[1] != '\0')
-	return (ma);
+	if (*ma == 0)
 	return (NULL);
+	return (ma);
 }

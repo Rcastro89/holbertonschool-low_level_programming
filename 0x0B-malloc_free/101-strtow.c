@@ -24,7 +24,7 @@ char **strtow(char *str)
 				j++;
 		}
 	}
-	ma = (char **) malloc(sizeof(char *) * i + 2);
+	ma = (char **) malloc(sizeof(char *) * i + 3);
 	i = 0;
 	for (j = 0; j < len; j++)
 	{
@@ -32,7 +32,7 @@ char **strtow(char *str)
 		{
 			for (k = 0; str[j] != 32; k++)
 				j++;
-			ma[i] = (char *) malloc(sizeof(char) * k + 2);
+			ma[i] = (char *) malloc(sizeof(char) * k + 1);
 			i++;
 		}
 	}

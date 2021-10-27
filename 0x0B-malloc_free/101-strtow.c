@@ -1,6 +1,31 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"main.h"
+
+/**
+ * heigth - count words
+ * @str: string evaluate
+ * @len: lengedt of str
+ * Return: (i) success
+ */
+int heigth(char *str, int len)
+{
+	int j, i, k;
+
+	if (*str == 32)
+		return (0);
+	for (j = 0; j < len; j++)
+	{
+		if (str[j] != 32)
+		{
+			i++;
+			for (k = 0; str[j] != 32; k++)
+				j++;
+		}
+	}
+	return (i);
+}
+
 /**
  * strtow - string word x word
  * @str: string evaluate
@@ -15,16 +40,10 @@ char **strtow(char *str)
 		return (NULL);
 	while (str[len] != '\0')
 		len++;
-	for (j = 0; j < len; j++)
-	{
-		if (str[j] != 32)
-		{
-			i++;
-			for (k = 0; str[j] != 32; k++)
-				j++;
-		}
-	}
-	ma = (char **) malloc(sizeof(char *) * i);
+	i = heigth(str, len);
+	if (i == 0)
+		return (NULL);
+	ma = (char **) malloc(sizeof(char) * i);
 	i = 0;
 	for (j = 0; j < len; j++)
 	{

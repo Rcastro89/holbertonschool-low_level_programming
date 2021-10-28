@@ -1,29 +1,32 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"main.h"
-
 /**
  * heigth - count words
- * @str: string evaluate
- * @len: lengedt of str
+ * @cad: string evaluate
+ * @largo: lengedt of str
  * Return: (i) success
  */
-int heigth(char *str, int len)
+int heigth(char *cad, int largo)
 {
-	int j, i, k;
+	int a;
+	int b = 0;
+	int c;
 
-	if (*str == 32)
-		return (0);
-	for (j = 0; j < len; j++)
+	for (a = 0; a < largo; a++)
 	{
-		if (str[j] != 32)
+		if (cad[a] != 32)
 		{
-			i++;
-			for (k = 0; str[j] != 32; k++)
-				j++;
+			b++;
+			for (c = 0; cad[a] != 32; c++)
+			{
+				if (cad[a] == '\0')
+					break;
+				a++;
+			}
 		}
 	}
-	return (i);
+	return (b);
 }
 
 /**
@@ -33,38 +36,44 @@ int heigth(char *str, int len)
  */
 char **strtow(char *str)
 {
-	char **ma = NULL;
-	int i = 0, j, k, len = 0, l = 0;
+	char **ma;
+	unsigned int i = 0, j, k, len = 0, m = 0, t, y, u;
 
-	if (str == NULL)
-		return (NULL);
 	while (str[len] != '\0')
 		len++;
+	if (str == NULL || len == 0 || len == 1)
+		return (NULL);
 	i = heigth(str, len);
 	if (i == 0)
 		return (NULL);
-	ma = (char **) malloc(sizeof(char) * i);
-	i = 0;
-	for (j = 0; j < len; j++)
+	ma = (char **) malloc(sizeof(char *) * i + 1);
+	for (m = 0, j = 0; j < len; j++)
 	{
-		if (str[j] != 32)
-		{
-			for (k = 0; str[j] != 32; k++)
-				j++;
-			ma[i] = (char *) malloc(sizeof(char) * k);
-			i++;
-		}
-	}
-	for (j = 0; j < len; j++)
-	{
-		if (str[j] != 32)
+		if (str[j] != 32 && str[j] != '\0')
 		{
 			for (k = 0; str[j] != 32; k++, j++)
-				ma[l][k] = str[j];
-			ma[l][k + 1] = '\0';
-			l++;
+			{
+				if (str[j] == '\0')
+					break;
+			}
+			ma[m] = (char *) malloc(sizeof(char) * k);
+			m++;
 		}
 	}
-	ma[l] = '\0';
+	for (y = 0, t = 0; t < len; t++)
+	{
+		if (str[t] != 32 && str[t] != '\0')
+		{
+			for (u = 0; str[t] != 32; u++)
+			{
+				if (str[t] == '\0')
+					break;
+				ma[y][u] = str[t];
+				t++;
+			}
+			y++;
+		}
+	}
+	ma[y] = '\0';
 	return (ma);
 }

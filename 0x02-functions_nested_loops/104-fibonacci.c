@@ -10,16 +10,16 @@ int main(void)
 	long long int i = 2, a = 1, b = 2;
 	long long int c = 0;
 
-	printf("%ld, %ld, ", a, b);
+	printf("%lld, %lld, ", a, b);
 	for (; i < 98; i++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
 		if (i < 97)
-			printf("%ld, ", c);
+			printf("%lld, ", c);
 		if (i == 97)
-			printf("%ld\n", c);
+			printf("%lld\n", c);
 	}
 	return (0);
 }

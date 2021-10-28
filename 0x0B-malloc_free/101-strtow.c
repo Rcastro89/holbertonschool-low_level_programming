@@ -46,7 +46,7 @@ char **strtow(char *str)
 	i = heigth(str, len);
 	if (i == 0)
 		return (NULL);
-	ma = (char **) malloc(sizeof(char *) * i + 2);
+	ma = (char **) malloc(sizeof(char *) * i + 1);
 	for (m = 0, j = 0; j < len; j++)
 	{
 		if (str[j] != 32 && str[j] != '\0')
@@ -56,7 +56,7 @@ char **strtow(char *str)
 				if (str[j] == '\0')
 					break;
 			}
-			ma[m] = (char *) malloc(sizeof(char) * k + 1);
+			ma[m] = (char *) malloc(sizeof(char) * k + 2);
 			m++;
 		}
 	}

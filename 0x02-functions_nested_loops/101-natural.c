@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include "main.h"
 /**
- * print_natural - add number naturals
- * Return: (d) success
+ * print_last_digit - return last number of digit
+ * @n: integer that cheked
+ * Return: (1) success
  */
-int print_natural(void)
+int main(void)
 {
 	unsigned int a = 1;
 	unsigned int b = 0;
@@ -34,5 +34,6 @@ int print_natural(void)
 		}
 	} while (b < n);
 	d = d + e;
-	return (d);
+	printf("%d\n", d);
+	return (0);
 }

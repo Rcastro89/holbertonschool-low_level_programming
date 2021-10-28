@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-    long int i = 2, a = 1, b = 2;
+	long int i = 2, a = 1, b = 2;
 	long int c = 0;
 
 	printf("%ld, %ld, ", a, b);
-	for (;i < 50; i++)
+	for (; i < 50; i++)
 	{
 		c = a + b;
 		a = b;
@@ -21,5 +21,5 @@ int main(void)
 		if (i == 49)
 			printf("%ld\n", c);
 	}
-    return (0);
+	return (0);
 }

@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-    long int i = 0, a = 0, b = 1;
+    long int i = 0, a = 1, b = 2;
 	long int c = 0;
 
 	printf("%ld, %ld, ", a, b);

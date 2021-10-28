@@ -56,7 +56,7 @@ char **strtow(char *str)
 				if (str[j] == '\0')
 					break;
 			}
-			ma[m] = (char *) malloc(sizeof(char) * k);
+			ma[m] = (char *) malloc(sizeof(char) * k + 1);
 			m++;
 		}
 	}

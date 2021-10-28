@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
- * print_last_digit - return last number of digit
- * @n: integer that cheked
- * Return: (1) success
+ * main - return last number of digit
+ * Return: (0) success
  */
 int main(void)
 {

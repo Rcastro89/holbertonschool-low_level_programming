@@ -49,32 +49,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ma = malloc(s1i + s2j + 1);
 	if (ma == 0)
 	return (NULL);
-	if (s1 == NULL && s2 == NULL)
-	return (ma);
 	if (s1 == NULL)
-	{
-		s2j = cuentacadena2(s2, n);
-		ma = malloc(s2j + 1);
-		for (i = 0; i < s2j; i++)
-		ma[i] = s2[i];
-	}
-	else if (s2 == NULL)
-	{
-		s1i = cuentacadena1(s1);
-		ma = malloc(s1i + 1);
-		for (i = 0; i < s1i; i++)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	s2j = cuentacadena2(s2, n);
+	s1i = cuentacadena1(s1);
+	ma = malloc(sizeof(char) * (s1i + s2j) + 1);
+	for (i = 0; i < s1i; i++)
 		ma[i] = s1[i];
-	}
-	else
-	{
-		s2j = cuentacadena2(s2, n);
-		s1i = cuentacadena1(s1);
-		ma = malloc(s1i + s2j + 1);
-		for (i = 0; i < s1i; i++)
-			ma[i] = s1[i];
-		for (j = 0; j < s2j; j++, i++)
-			ma[i] = s2[j];
-	}
+	for (j = 0; j < s2j; j++, i++)
+		ma[i] = s2[j];
 	ma[i] = '\0';
 	return (ma);
 }

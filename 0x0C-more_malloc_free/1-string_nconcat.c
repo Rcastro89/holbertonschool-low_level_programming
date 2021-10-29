@@ -7,9 +7,9 @@
  * @n: length comparate
  * Return: (cpy) success
 */
-int cuentacadena2(char *cad, int n)
+unsigned int cuentacadena2(char *cad, unsigned int n)
 {
-	int len = 0, cpy = 0;
+	unsigned int len = 0, cpy = 0;
 
 	while (cad[len] != '\0')
 		len++;
@@ -27,9 +27,9 @@ int cuentacadena2(char *cad, int n)
  * @cad: string
  * Return: (len) success
 */
-int cuentacadena1(char *cad)
+unsigned int cuentacadena1(char *cad)
 {
-	int len = 0;
+	unsigned int len = 0;
 
 	while (cad[len] != '\0')
 		len++;

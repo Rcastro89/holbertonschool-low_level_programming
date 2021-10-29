@@ -2,8 +2,9 @@
 #include"main.h"
 #include <stdlib.h>
 /**
- * 
- * 
+ * malloc_checked - alloc memory
+ * @b: integer sizeof
+ * Return: (ma) success
  */
 void *malloc_checked(unsigned int b)
 {

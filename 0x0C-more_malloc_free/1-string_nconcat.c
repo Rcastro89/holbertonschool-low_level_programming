@@ -1,19 +1,18 @@
 #include"main.h"
 #include<stdlib.h>
-#include<stdio.h>
 /**
  * cuentacadena2 - count the length of the string
  * @cad: string
  * @n: length comparate
  * Return: (cpy) success
 */
-unsigned int cuentacadena2(char *cad, unsigned int n)
+int cuentacadena2(char *cad, unsigned int n)
 {
 	unsigned int len = 0, cpy = 0;
 
 	while (cad[len] != '\0')
 		len++;
-		if (n >= len)
+	if (n >= len)
 		{
 			cpy = len;
 		} else

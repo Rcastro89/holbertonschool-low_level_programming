@@ -13,12 +13,12 @@ int cuentacadena2(char *cad, unsigned int n)
 	while (cad[len] != '\0')
 		len++;
 	if (n >= len)
-		{
-			cpy = len;
-		} else
-		{
-			cpy = n;
-		}
+	{
+		cpy = len;
+	} else
+	{
+		cpy = n;
+	}
 	return (cpy);
 }
 /**

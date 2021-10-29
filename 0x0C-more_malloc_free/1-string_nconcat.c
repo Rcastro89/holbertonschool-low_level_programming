@@ -56,6 +56,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s2j = cuentacadena2(s2, n);
 	s1i = cuentacadena1(s1);
 	ma = malloc(sizeof(char) * (s1i + s2j) + 1);
+	if (ma == NULL)
+		return (NULL);
 	for (i = 0; i < s1i; i++)
 		ma[i] = s1[i];
 	for (j = 0; j < s2j; j++, i++)

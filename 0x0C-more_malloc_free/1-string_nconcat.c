@@ -45,7 +45,7 @@ int cuentacadena1(char *cad)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ma;
-	int s1i = 0, s2j = 0, i, j;
+	unsigned int s1i = 0, s2j = 0, i, j;
 
 	ma = malloc(s1i + s2j + 1);
 	if (ma == 0)

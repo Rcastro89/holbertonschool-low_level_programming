@@ -1,5 +1,6 @@
 #include"main.h"
 #include<stdlib.h>
+#include<stdio.h>
 /**
  * cuentacadena2 - count the length of the string
  * @cad: string

@@ -15,6 +15,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	float age1;
 	char *name1, *owner1;
 
+	if (name == NULL || owner == NULL)
+		return (NULL);
 	can = malloc(sizeof(dog_t));
 	if (can == NULL)
 		return (NULL);

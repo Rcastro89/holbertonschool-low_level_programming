@@ -7,10 +7,6 @@
  */
 void print_dog(struct dog *d)
 {
-	char *can_name = d->name;
-	float can_age = d->age;
-	char *can_owner = d->owner;
-
 	if (d != 0)
 	{
 		if (d->name == NULL)

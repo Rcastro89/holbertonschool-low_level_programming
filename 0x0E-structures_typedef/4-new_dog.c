@@ -12,7 +12,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *can;
 	int lenname, i, lenowner;
-	float age1;
 	char *name1, *owner1;
 
 	if (name == NULL || owner == NULL)
@@ -43,8 +42,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (i = 0; i < lenowner; i++)
 		owner1[i] = owner[i];
 	owner1[i] = '\0';
-	age1 = age;
-	can->age = age1;
+	can->age = age;
 	can->name = name1;
 	can->owner = owner1;
 	return (can);

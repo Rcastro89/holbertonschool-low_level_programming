@@ -11,10 +11,10 @@ typedef struct dog
 	char *name;
 	float age;
 	char *owner;
-} can;
+} dog_t;
 
 
-can *my_dog(char *name, float age, char *owner);
+dog_t *my_dog(char *name, float age, char *owner);
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 

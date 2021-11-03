@@ -10,7 +10,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	unsigned int i;
 	void (*fun_ptr)(int) = action;
 
-	if (!size || !action)
+	if (!size || !action || !array)
 		return;
 	for (i = 0; i < size; i++)
 		(*fun_ptr)(array[i]);

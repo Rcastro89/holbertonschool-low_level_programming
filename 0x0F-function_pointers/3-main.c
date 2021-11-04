@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
 	int a;
 	int b;
-	char *op;
+	char op;
 	int result;
 
 	if (argc != 4)
@@ -17,21 +17,21 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	op = argv[2];
+	op = *argv[2];
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	if (*op != '+' && *op != '-' && *op != '*' &&
-		*op != '/' && *op != '%')
+	if (op != '+' && op != '-' && op != '*' &&
+		op != '/' && op != '%')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*op == '/' || *op == '%') && (b == 0))
+	if ((op == '/' || op == '%') && (b == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	result = get_op_func(op)(a, b);
+	result = get_op_func(argv[2])(a, b);
 	printf("%d\n", result);
 	return (0);
 }

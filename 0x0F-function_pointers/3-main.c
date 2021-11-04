@@ -9,15 +9,15 @@ int main(int argc, char *argv[])
 {
 	int a;
 	int b;
-	
+	int (*pointer)(int, int);
+
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	
-	if (*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' &&
-		*argv[2] != '/' && *argv[2] != '%')
+	pointer = get_op_func(argv[2]);
+	if (!pointer)
 	{
 		printf("Error\n");
 		exit(99);

@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 	int a;
 	int b;
 	int (*pointer)(int, int);
+	int res;
 
 	if (argc != 4)
 	{
@@ -29,6 +30,7 @@ int main(int argc, char *argv[])
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	printf("%d\n", get_op_func(argv[2])(a, b));
+	res = pointer(a, b);
+	printf("%d\n", res);
 	return (0);
 }

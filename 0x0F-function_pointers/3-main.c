@@ -33,6 +33,5 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	result = get_op_func(op)(a, b);
 	printf("%d\n", result);
-	printf("\n(((%d)))\n", argc);
 	return (0);
 }

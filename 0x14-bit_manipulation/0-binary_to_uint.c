@@ -6,27 +6,19 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int one = 2, sum = 0;
-	int i, j, lenght = 0, multi = 0;
+	unsigned int one = 0, sum = 0;
+	int lenght = 0, multi = 1;
 
 	if (b == NULL)
 		return (0);
 	lenght = strlen(b) - 1;
-	multi = lenght;
-	for (i = 0; i <= lenght; i++, multi--)
+	for (; lenght >= 0; lenght--)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[lenght] != '0' && b[lenght] != '1')
 			return (0);
-		if (b[i] == '1')
-		{
-			for (j = 1; j < multi; j++)
-				one = one * 2;
-			if (i != lenght)
-				sum += one;
-			else
-				sum += 1;
-			one = 2;
-		}
+		one = (b[lenght] - '0') * multi;
+		sum += one;
+		multi = multi * 2;
 	}
 	return (sum);
 }

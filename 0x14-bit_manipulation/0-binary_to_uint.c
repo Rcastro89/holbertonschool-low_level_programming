@@ -10,7 +10,7 @@ unsigned int binary_to_uint(const char *b)
 	int i, j, lenght = 0, multi = 0;
 
 	if (b == NULL)
-		return (1);
+		return (0);
 	lenght = strlen(b) - 1;
 	multi = lenght;
 	for (i = 0; i <= lenght; i++, multi--)

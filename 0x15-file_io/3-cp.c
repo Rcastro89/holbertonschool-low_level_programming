@@ -30,10 +30,7 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	if (ctrread == -1)
-		return (-1);
-	ctrwrite = write(op_to, buf, ctrread);
-	if (ctrwrite == -1)
-		return (-1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	ctrclose = close(op_to);
 	if (ctrclose == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op_to), exit(100);

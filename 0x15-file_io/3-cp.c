@@ -34,15 +34,15 @@ int main(int argc, char *argv[])
 	if (ctrwrite == -1)
 		return (-1);
 	ctrclose = close(op_to);
-	if (op_from == -1)
+	if (ctrclose == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ctrclose);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", -1);
 		exit(100);
 	}
 	ctrclose = close(op_from);
-	if (op_from == -1)
+	if (ctrclose == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ctrclose);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", -1);
 		exit(100);
 	}
 	return (0);

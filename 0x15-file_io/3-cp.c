@@ -36,13 +36,13 @@ int main(int argc, char *argv[])
 	ctrclose = close(op_to);
 	if (ctrclose == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", -1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op_to);
 		exit(100);
 	}
 	ctrclose = close(op_from);
 	if (ctrclose == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", -1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", op_from);
 		exit(100);
 	}
 	return (0);

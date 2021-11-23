@@ -3,7 +3,7 @@
  * main - function to copy files
  * @argc: numbers of parametres
  * @argv: files from and to
- * Return: (0) success 
+ * Return: (0) success
  */
 int main(int argc, char *argv[])
 {
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	}
 	ctrread = read(op_from, buf, 1024);
 	if (ctrread == -1)
-		return (-1);	
+		return (-1);
 	ctrwrite = write(op_to, buf, ctrread);
 	if (ctrwrite == -1)
 		return (-1);

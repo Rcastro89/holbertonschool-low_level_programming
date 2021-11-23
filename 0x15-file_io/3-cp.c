@@ -12,21 +12,22 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-	op_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (op_to == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	op_from = open(argv[1], O_RDONLY);
 	if (op_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
+	op_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (op_to == -1)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	
 	ctrread = read(op_from, buf, 1024);
 	for (; ctrread > 0; ctrread = read(op_from, buf, 1024))
 	{
 		ctrread = write(op_to, buf, ctrread);
-		if (ctrread < 0)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		if (ctrread == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]), exit(98);
 	}
 	if (ctrread == -1)
 		return (-1);

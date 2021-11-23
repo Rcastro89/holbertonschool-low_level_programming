@@ -16,7 +16,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		for (i = 0; text_content[i] != '\0'; i++)
 			;
-		chwrite = write(creat, text_content, (i + 1));
+		chwrite = write(creat, text_content, i);
 		if (chwrite == -1)
 			return (-1);
 	}

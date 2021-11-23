@@ -27,7 +27,15 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
+
 	ctrread = read(op_from, buf, 1024);
+	for (; ctrread > 0; ctrread = read(op_from, buf, 1024))
+	{
+		ctrread = write(op_to, buf, ctrread);
+		if (ctrread < 0)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	}
+
 	if (ctrread == -1)
 		return (-1);
 	ctrwrite = write(op_to, buf, ctrread);
@@ -47,3 +55,5 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+
+

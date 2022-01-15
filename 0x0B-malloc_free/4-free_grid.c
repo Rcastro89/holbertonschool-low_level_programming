@@ -6,7 +6,7 @@
  * @grid: int grid
  * @height: int height
 */
-void free_grid(int **grid, int height)
+void free_grid(char **grid, int height)
 {
 	short int j;
 

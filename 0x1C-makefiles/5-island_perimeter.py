@@ -6,6 +6,7 @@ def island_perimeter(grid):
     """sumar perimetros"""
     var = None
     if len(grid) < 100:
+        var = 0
         for fila in range(len(grid)):
             for colum in range(len(grid[fila])):
                 if grid[fila][colum] == 1:

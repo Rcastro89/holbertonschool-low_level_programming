@@ -8,6 +8,8 @@ def island_perimeter(grid):
     if len(grid) < 100:
         var = 0
         for fila in range(len(grid)):
+            if len(grid[fila]) > 100:
+                return None
             for colum in range(len(grid[fila])):
                 if grid[fila][colum] == 1:
                     try:

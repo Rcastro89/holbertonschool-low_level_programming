@@ -17,14 +17,14 @@ def validar_rectangulo(grid):
 
 def island_perimeter(grid):
     """sumar perimetros"""
-    var = 0
+    var = None
     if len(grid) < 100 and len(grid) > 0:
         var = 0
         if validar_rectangulo(grid) == -1:
-            return 0
+            return None
         for fila in range(len(grid)):
             if len(grid[fila]) > 100 or len(grid[fila]) == 0:
-                return 0
+                return None
             for colum in range(len(grid[fila])):
                 if grid[fila][colum] == 1:
                     try:

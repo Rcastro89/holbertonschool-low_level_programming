@@ -47,4 +47,10 @@ def island_perimeter(grid):
                             var = var + 1
                     except Exception:
                         pass
+                if grid[fila][colum] == 0:
+                    try:
+                        if grid[fila-1][colum] == 1 and grid[fila][colum-1] == 1 and grid[fila][colum+1] == 1 and grid[fila+1][colum] == 1:
+                            return None
+                    except Exception:
+                        pass
     return var
